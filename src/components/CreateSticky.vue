@@ -117,10 +117,75 @@ export default {
 
 .btn {
   position: absolute;
-  top: 0;
+  color: var(--clr-neon);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: var(--clr-neon) 4px solid;
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  top: 3%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 26px;
+  letter-spacing: 1em;
+  box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+}
+
+
+
+.btn-create {
+  font-family: "Big Shoulders Inline Text", cursive;
+  text-transform:uppercase;
+  color: rgb(239, 132, 132);
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.55), 0 0 0.7em currentColor;
+}
+
+.btn::before {
+	pointer-events: none;
+	content: "";
+	position: absolute;
+	background: var(--clr-neon);
+	top: 120%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: perspective(1.2em) rotateX(40deg) scale(1.5, 0.5);
+	filter: blur(1.15em);
+	opacity: 0.7;
+	transition: transform 0.5s linear;
+}
+
+.btn::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 0 4em 0.6em var(--clr-neon), 0 0 1em 0.2em var(--clr-white);
+	opacity: 0;
+	background: var(--clr-neon);
+	z-index: -1;
+	transition: opacity 0.5s linear;
+}
+
+.btn:hover,
+.btn:focus {
+	color: var(--clr-neon);
+	text-shadow:2;
+}
+
+.btn:hover::before,
+.btn:focus::before {
+	opacity: 1;
+	transform: perspective(1em) rotateX(40deg) scale(1.5, 0.6);
+	transition: transform 0.5s linear;
+}
+
+.btn:hover::after,
+.btn:focus::after {
+	opacity: 1;
 }
 
 .form {
@@ -141,10 +206,6 @@ export default {
   border-radius: 10px;
 }
 
-.btn-create {
-  font-family: "Big Shoulders Inline Text", cursive;
-  color: rgb(239, 132, 132);
-}
 
 .material-symbols-outlined {
   color: rgb(32, 112, 108);

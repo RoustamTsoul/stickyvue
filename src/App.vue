@@ -25,7 +25,7 @@ margin: 0; */
 }
 
 body{
-background:radial-gradient(ellipse at 50% 30%,rgba(167, 56, 80, 1), rgba(45, 37, 38, 1), rgba(196, 102, 77, 1));
+background-image: linear-gradient(to bottom, #121025, #12263e, #073d56, #005569, #006e76, #007b73, #218769, #48925a, #6a9242, #8d8f2f, #af8927, #d17e32);
 height: 100vh;
 }
 

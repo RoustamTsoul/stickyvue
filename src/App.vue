@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <CreateSticky/>
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CreateSticky from './components/CreateSticky.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CreateSticky
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text&display=swap');
+*{
+/* padding: 0;
+margin: 0; */
+}
+
+body{
+background:radial-gradient(ellipse at 50% 30%,rgba(167, 56, 80, 1), rgba(45, 37, 38, 1), rgba(196, 102, 77, 1));
+height: 100vh;
+}
+
+.container{
+width: 100%;
+margin: auto;
 }
 </style>
